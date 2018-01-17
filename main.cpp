@@ -399,23 +399,24 @@ extern "C" void* ThreadStats(void*) {
 
 static const string mainnet_seeds[] = {"mainnet-seed.particl.io", ""};
 static const string testnet_seeds[] = {"testnet-seed.particl.io", ""};
-/*
-static const string mainnet_seeds[] = {"dnsseed.bluematt.me", "bitseed.xf2.org", "dnsseed.bitcoin.dashjr.org", "seed.bitcoin.sipa.be", ""};
-static const string testnet_seeds[] = {"testnet-seed.alexykot.me",
-                                       "testnet-seed.bitcoin.petertodd.org",
-                                       "testnet-seed.bluematt.me",
-                                       "testnet-seed.bitcoin.schildbach.de",
-                                       ""};
-*/
 
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  /*
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8333), true);
+    db.Add(CService("7vusex6gv5eerqi2.onion", 51738), true);
+/*
+    db.Add(CService("quf7tm4gk3xn3aee.onion", 51738), true);
+    db.Add(CService("46fvsrrq75dx5vq4.onion", 51738), true);
+    db.Add(CService("ciikdjtoop7l6p6h.onion", 51738), true);
+    db.Add(CService("frlfghlielxq2ncy.onion", 51738), true);
+    db.Add(CService("partusq5qad6jd2c.onion", 51738), true);
+    db.Add(CService("x6fxdwpq2krxzmr3.onion", 51738), true);
+    db.Add(CService("amu2ck7lyw26fiqs.onion", 51738), true);
+    db.Add(CService("kfyopkn3shigcneh.onion", 51738), true);
+    db.Add(CService("6aabkbf74orka6nj.onion", 51738), true);
+*/
   }
-  */
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
