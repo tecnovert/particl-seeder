@@ -85,17 +85,17 @@ public:
           host = optarg;
           break;
         }
-        
+
         case 'm': {
           mbox = optarg;
           break;
         }
-        
+
         case 'n': {
           ns = optarg;
           break;
         }
-        
+
         case 't': {
           int n = strtol(optarg, NULL, 10);
           if (n > 0 && n < 1000) nThreads = n;
@@ -418,8 +418,8 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"mainnet-seed.particl.io", ""};
-static const string testnet_seeds[] = {"testnet-seed.particl.io", ""};
+static const string mainnet_seeds[] = {"mainnet-seed.particl.io", "mainnet-seed.tecnovert.net", ""};
+static const string testnet_seeds[] = {"testnet-seed.particl.io", "testnet-seed.tecnovert.net", ""};
 
 static const string *seeds = mainnet_seeds;
 
